@@ -32,9 +32,9 @@ def main():
     model = get_word2vec_model('./input')
     print('type of model: ', type(model))
 
-    # vector represents word 'Tamhong'
-    v1 = model['Tamhong']
-    print('model["Tamhong"]: ', v1)
+    # vector represents word 'swelling'
+    v1 = model['swelling']
+    print('model["swelling"]: ', v1)
 
     # vocabulary
     print('Vocabulary length 1: ', len(model.wv.vocab))
@@ -71,11 +71,11 @@ def main():
         print("2nd: not existing word 'ahaha'")
 
     try:
-        print("Tamhong", model['Tamhong'])
+        print("swelling", model['swelling'])
     except:
-        print("2nd: not existing word 'Tamhong'")
+        print("2nd: not existing word 'swelling'")
 
-    v2 = model['Tamhong']
+    v2 = model['swelling']
     print("v1 vs v2: ", 1 - spatial.distance.cosine(v1, v2))
 
     print('Vocabulary length 2: ', len(model.wv.vocab))
